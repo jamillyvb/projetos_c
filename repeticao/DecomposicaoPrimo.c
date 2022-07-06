@@ -2,24 +2,24 @@
 
 int main(){
 
-    int a=2, n, i;
+    int a=2, n, i=2;
 
     do{
         scanf("%d", &n);
+        if(n<1) printf("Fatoracao nao e possivel para o numero %d!\n", n);
     }while(n<1);
     
-    while(){
-        
+    printf("%d = ", n);
+    while(n>1){
+        if(n%i == 0){
+            n/=i;
+            printf("%d", i);
+            if(i>1 && n>1){
+                printf(" x ");
+            }
+        }else i++;        
     }
-    for(i=2; i<10; i++){
-        
-        if(n%2 == 0){
-            n /= i;
-            i = 0;
-        }
-        printf("%d\n", n);
-        printf("%d\n", i);
-    }
+    printf("\n");
 
     return 0;
 }
